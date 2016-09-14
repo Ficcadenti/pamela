@@ -1,0 +1,54 @@
+#----------------------------------------------------------------
+#
+#  Makefile for Pamela/MongoDB/Root
+#
+#  Author: Raffaele Ficcadenti
+#
+#----------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------
+# Definitions:
+#
+
+QTDIR = /usr/local/Qt-5.5.1
+
+CC = g++
+CP = /usr/bin/cp
+PREFIX=/usr/pamela
+BINDIR=${PREFIX}/bin
+SUBDIR=./
+LIBS = -lbson-1.0 -lmongoc-1.0 
+INCPATH = -I$(SUBDIR)/src -I$(SUBDIR)/inc -I/usr/local/include/libbson-1.0 -I/usr/local/include/libmongoc-1.0
+LIBPATH = -L/usr/local/lib -L/usr/lib64 
+CFLAGS = -g -Wall -std=c++11 -fPIC `root-config --cflags` 
+LDFLAGS = `root-config --glibs`
+
+TARGET = pamelaroot
+
+SORGENTI 	=      	$(SUBDIR)/src/pamelaroot.cpp\
+			$(SUBDIR)/src/datetime.cpp\
+			$(SUBDIR)/src/parson.cpp
+
+HEADERS =       $(SUBDIR)/inc/datetime.h\
+		$(SUBDIR)/inc/parson.h				
+                
+
+$(TARGET): $(SORGENTI)
+	$(CC) $(CFLAGS) $(LIBPATH) $(INCPATH) $(LIBS) -o $(TARGET) $(LDFLAGS) $(SORGENTI) $(HEADERS)
+
+
+all: $(TARGET)
+
+clean:
+	$(RM) $(TARGET)
+
+realclean:
+	$(RM) $(TARGET)
+	$(RM) $(BINDIR)/$(TARGET)
+
+install:
+	$(CP) $(TARGET) $(BINDIR)
+
+

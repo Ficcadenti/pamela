@@ -1,0 +1,51 @@
+# Additional platform independend Makefile options
+# 
+# This file is overwritten the next time configure is called.
+# If you want to define your own user options, then defined them in Makefile.user
+ 
+# 
+# Section A: Additional libraries
+# 
+# Important: Don't modify this sections by yourself 
+ 
+GEANT4INSTALLED  = 1
+HEASOFTINSTALLED = 0
+ 
+# 
+# Section B: Compiler optimizations
+# 
+# Important comments
+# 
+# If you want to eliminate all massert, mdebug, etc. code use: -DNDEBUG
+# If you want to produce debug infos in your executables use: -g
+# The default optimization level is: -O
+# You can combine all those options: -O -g -DNDEBUG
+# 
+
+OPT = -g 
+# For improved execution performance with the GNU gcc compiler (4.3 or higher) 
+# you might also test one of the following flags.
+#
+# On an Intel Pentium M:
+# OPT += -march=native
+# 
+# On an Intel Pentium 4/Xeon:
+# OPT += -march=native
+# 
+# On an Intel Core 2 Duo:
+# OPT += -march=native
+#
+# On an Intel Atom (requires 11.0 or higher):
+# OPT += -O1 -msse3 -march=core2 -mfpmath=sse
+#
+# Remember also to compile Geant4/ROOT with those options, otherwise you only 
+# speed up the MEGAlib elements but not the libraries which ROOT uses
+
+# 
+# Section C: Geant4 visualization options
+# 
+# Important: Only OpenGL and DawnFile can be detected by this script 
+#            If you have anything else, set it in Makefile.user 
+# 
+
+

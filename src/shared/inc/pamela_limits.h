@@ -1,0 +1,23 @@
+#define PIPELINE_TASK_DESC_LEN		45
+#define PIPELINE_DESC_LEN		45
+#define	PIPELINE_TASK_EXE_LEN		45
+#define PIPELINE_ROOT_FILE_LEN		45
+#define PIPELINE_PNG_FILE_DESC_LEN	45
+#define USER_LOGIN_LEN			45
+#define USER_NAME_LEN			45
+#define USER_DESC_LEN			200
+#define PARAM_NAME_LEN			45
+#define OPERATOR_NAME_LEN		10
+#define PARAM_VALUE_LEN			45
+
+#define TO_BE_SUBMITTED			6
+#define SUBMITTED			7
+#define WORKING				1
+#define FINISHED			2
+
+#define TASK_WITHOUT_ERROR		0
+#define _NOT_OK				-1
+#define _OK				0
+
+#define VALID_DAY			30
+#define MAX_RUNNING_DAY			2

@@ -1,0 +1,5 @@
+1,1,Task without user
+2,2,Task without pipeline
+3,3,Task running for more than N days
+4,4,Task stalled for more than N days
+5,0,Task Ok
