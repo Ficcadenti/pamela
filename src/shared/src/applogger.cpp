@@ -1,14 +1,20 @@
-//
-// C++ Implementation: applogger
-//
-// Description:
-//
-//
-// Author: root <root@pbetti>, (C) 2003
-//
-// Copyright: See COPYING file that comes with this distribution
-//
-//
+/*
+#  MODULE DESCRIPTION:
+#  apploggercpp
+#  <enter module description here>
+#
+#  AUTHORS:
+#  Author Name		Raffaele Ficcadenti
+#  Author email		raffaele.ficcadenti@asdc.asi.it
+#
+#
+#  HISTORY:
+#  -[Date]- -[Who]------------- -[What]---------------------------------------
+#  00.00.00 Author Name         Creation date
+#--
+#
+*/
+
 #include "applogger.h"
 #include <unistd.h>
 #include <iostream>
